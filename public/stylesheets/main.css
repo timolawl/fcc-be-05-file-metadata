@@ -2,27 +2,30 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  font-family: 'Open Sans';
+  font-family: 'Ubuntu';
   font-size: 0.95rem;
   text-align: center; }
 
 body {
-  background: #e6e2af; }
+  background: #accfcc; }
 
 ol {
   list-style-position: inside; }
 
 a:link {
-  color: #046380; }
+  color: #8a0917; }
 
 a:visited {
-  color: #046380; }
+  color: #8a0917; }
 
 a:hover {
-  color: #a7a37e; }
+  color: #595241; }
 
 a:active {
-  color: #a7a37e; }
+  color: #595241; }
+
+li:not(:last-child) {
+  margin-bottom: 0.25rem; }
 
 .wrapper {
   position: absolute;
@@ -31,61 +34,33 @@ a:active {
   transform: translate(-50%, -50%);
   padding: 1.5rem;
   border: 1px solid black;
-  background: #efecca; }
+  background: #b8ae9c; }
 
-.url-shortener--title {
-  font-family: BenchNine;
-  color: #046380;
+.file-metadata--title {
+  font-family: 'Playfair Display';
+  color: #8a0917;
   font-weight: bold;
   font-size: 3.5rem;
-  margin-bottom: 0.2rem;
-  line-height: 80%; }
+  margin-bottom: 0.5rem;
+  line-height: 100%; }
 
-.url-shortener--subtitle {
-  font-family: BenchNine;
-  color: #046380;
+.file-metadata--subtitle {
+  color: #8a0917;
   font-weight: bold;
-  font-size: 1.1rem;
+  font-size: 0.9rem;
   margin-bottom: 0.2rem; }
 
-.url-shortener__userstories--title {
+.file-metadata__userstories--title {
   font-weight: bold;
   font-size: 1.4rem;
   margin-bottom: 0.2rem;
   margin-top: 1rem; }
 
-.url-shortener__userstories--text {
+.file-metadata__userstories--text {
   margin-left: 1.5rem; }
 
-.url-shortener__exampleusage--title {
-  font-weight: bold;
-  font-size: 1.4rem;
-  margin-bottom: 0.2rem;
-  margin-top: 1rem; }
-
-.url-shortener__exampleusage--text {
-  margin-left: 1.5rem; }
-
-.url-shortener__exampleoutput--title {
-  font-weight: bold;
-  font-size: 1.4rem;
-  margin-bottom: 0.2rem;
-  margin-top: 1rem; }
-
-.url-shortener__exampleoutput--text {
-  margin-left: 1.5rem; }
-
-.url-shortener__outcome--title {
-  font-weight: bold;
-  font-size: 1.4rem;
-  margin-bottom: 0.2rem;
-  margin-top: 1rem; }
-
-.url-shortener__outcome--text {
-  margin-left: 1.5rem; }
-
-.url-shortener--fadeout {
-  color: #a7a37e; }
+.file-metadata__form--file {
+  margin-top: 0.5rem; }
 
 .footer {
   margin-top: 2rem; }
