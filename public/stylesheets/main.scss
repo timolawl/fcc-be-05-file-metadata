@@ -1,7 +1,7 @@
-$primary-color: #046380;
-$secondary-color: #a7a37e;
-$background-color: #efecca;
-$body-color: #e6e2af;
+$primary-color: #8a0917;
+$secondary-color: #595241;
+$background-color: #b8ae9c;
+$body-color: #accfcc;
 
 @mixin title($font-size: 1.4rem, $margin-bottom: 0.2rem) {
   font-weight: bold;
@@ -13,7 +13,7 @@ $body-color: #e6e2af;
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  font-family: 'Open Sans';
+  font-family: 'Ubuntu';
   font-size: 0.95rem;
   text-align: center;
 }
@@ -41,6 +41,10 @@ a {
   }
 }
 
+li:not(:last-child) {
+  margin-bottom: 0.25rem;
+}
+
 .wrapper {
   position: absolute;
   top: 50%;
@@ -51,17 +55,16 @@ a {
   background: $background-color;
 }
 
-.url-shortener {
+.file-metadata {
   &--title {
-    font-family: BenchNine;
+    font-family: 'Playfair Display';
     color: $primary-color;
-    @include title(3.5rem);
-    line-height: 80%;
+    @include title(3.5rem, 0.5rem);
+    line-height: 100%;
   }
   &--subtitle {
-    font-family: BenchNine;
     color: $primary-color;
-    @include title(1.1rem);
+    @include title(0.9rem);
   }
   &__userstories {
     &--title {
@@ -72,37 +75,10 @@ a {
       margin-left: 1.5rem;
     }
   }
-  &__exampleusage {
-    &--title {
-      @include title();
-      margin-top: 1rem;
+  &__form {
+    &--file {
+      margin-top: 0.5rem;
     }
-    &--text {
-      margin-left: 1.5rem;
-    }
-  }
-
-  &__exampleoutput {
-    &--title {
-      @include title();
-      margin-top: 1rem;
-    }
-    &--text {
-      margin-left: 1.5rem;
-    }
-  }
-  &__outcome {
-    &--title {
-      @include title();
-      margin-top: 1rem;
-    }
-    &--text {
-      margin-left: 1.5rem;
-    }
-  }
-
-  &--fadeout {
-    color: $secondary-color;
   }
 }
 

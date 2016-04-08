@@ -1,4 +1,5 @@
 node_modules/
+uploads/
 .eslintrc
 .env
 .DS_Store

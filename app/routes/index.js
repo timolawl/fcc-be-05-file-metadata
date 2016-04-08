@@ -1,24 +1,20 @@
 'use strict';
 
-var URLHandler = require(process.cwd() + '/app/controllers/urlHandler.server.js');
 
-module.exports = function(app, db) {
-
-    var urlHandler = new URLHandler(db);
+module.exports = function (app, multer) {
 
     app.route('/')
-        .get(function(req, res) {
+        .get(function (req, res) {
             res.sendFile(process.cwd() + '/public/index.html');
         });
 
-    app.route(/^\/new\/https?:\/\/[a-zA-Z.-]+/) // response for normal link
-        .get(urlHandler.getURL); // if it already exists in the db, then provide the already-generated shortened link.
-
-    app.route(/^\/\d{4}$/)  // response for an app-shortened link
-        .get(urlHandler.redirectURL);
+    app.route('/file-upload')
+        .post(multer({dest: './uploads/'}).single('fileToAnalyze'), function (req, res) {
+            res.json({ size: req.file.size });
+        });
 
     app.use(function (req, res) {   // default response for any other path
-        res.json({ "error": "Wrong url format. Please make sure you have a valid protocol and a real site." });
+        res.status(400).send('Bad Request');
     });
 
 };
