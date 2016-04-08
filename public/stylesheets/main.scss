@@ -1,0 +1,111 @@
+$primary-color: #046380;
+$secondary-color: #a7a37e;
+$background-color: #efecca;
+$body-color: #e6e2af;
+
+@mixin title($font-size: 1.4rem, $margin-bottom: 0.2rem) {
+  font-weight: bold;
+  font-size: $font-size;
+  margin-bottom: $margin-bottom;
+}
+
+*, :before, :after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: 'Open Sans';
+  font-size: 0.95rem;
+  text-align: center;
+}
+
+body {
+  background: $body-color;
+}
+
+ol {
+  list-style-position: inside;
+}
+
+a {
+  &:link {
+    color: $primary-color;
+  }
+  &:visited {
+    color: $primary-color;
+  }
+  &:hover {
+    color: $secondary-color;
+  }
+  &:active {
+    color: $secondary-color;
+  }
+}
+
+.wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 1.5rem;
+  border: 1px solid black;
+  background: $background-color;
+}
+
+.url-shortener {
+  &--title {
+    font-family: BenchNine;
+    color: $primary-color;
+    @include title(3.5rem);
+    line-height: 80%;
+  }
+  &--subtitle {
+    font-family: BenchNine;
+    color: $primary-color;
+    @include title(1.1rem);
+  }
+  &__userstories {
+    &--title {
+      @include title();
+      margin-top: 1rem;
+    }
+    &--text {
+      margin-left: 1.5rem;
+    }
+  }
+  &__exampleusage {
+    &--title {
+      @include title();
+      margin-top: 1rem;
+    }
+    &--text {
+      margin-left: 1.5rem;
+    }
+  }
+
+  &__exampleoutput {
+    &--title {
+      @include title();
+      margin-top: 1rem;
+    }
+    &--text {
+      margin-left: 1.5rem;
+    }
+  }
+  &__outcome {
+    &--title {
+      @include title();
+      margin-top: 1rem;
+    }
+    &--text {
+      margin-left: 1.5rem;
+    }
+  }
+
+  &--fadeout {
+    color: $secondary-color;
+  }
+}
+
+.footer {
+  margin-top: 2rem;
+}

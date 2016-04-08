@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>URL Shortener Microservice</title>
+        <link rel='stylesheet' href='//fonts.googleapis.com/css?family=BenchNine|Open+Sans'>
+        <link rel='stylesheet' type='text/css' href='/public/stylesheets/main.css'>
+
+    </head>
+    <body>
+        <div class='wrapper'>
+            <div class='url-shortener--title'>NTRLLYSHRT</div>
+          <div class='url-shortener--subtitle'>A URL Shortener Microservice</div>
+            <div class='url-shortener__userstory'>
+                <div class='url-shortener__userstories--title'>User Stories:</div>
+                <div class='url-shortener__userstories--text'>
+                    <ol>
+                        <li>I can pass a URL as a parameter and I will receive a shortened URL in the JSON response.</li>
+                        <li>If I pass an invalid URL that doesn't follow the valid http://www.example.com format, the JSON response will contain an error instead.</li>
+                        <li>When I visit that shortened URL, it will redirect me to my original link.</li>
+                    </ol>
+                </div>
+            </div>
+
+            <div class='url-shortener__exampleusage'>
+                <div class='url-shortener__exampleusage--title'>Example Creation Usage:</div>
+                <div class='url-shortener__exampleusage--text'>
+                    <a href='https://timolawl-url-shortener.herokuapp.com/new/https://www.google.com'>https://timolawl-url-shortener.herokuapp.com/new/https://www.google.com</a>
+                </div>
+            </div>
+
+            <div class='url-shortener__exampleoutput'>
+                <div class='url-shortener__exampleoutput--title'>Example Creation Output:</div>
+                <div class='url-shortener__exampleoutput--text'>
+                    { "original_url": "https://www.google.com", "short_url": "https://timolawl-url-shortener.herokuapp.com/0868", "createdAt": "2016-04-07T08:59:07.495Z" }
+                    <div class='url-shortener--fadeout'>Fieldname "createdAt" is used for expiring old links (180 days from creation), but is refreshed if a request is made for the same link later.</div>
+                </div>
+            </div>
+
+            <div class='url-shortener__outcome'>
+                <div class='url-shortener__outcome--title'>Example Outcome:</div>
+                <div class='url-shortener__outcome--text'>
+                    https://timolawl-url-shortener.herokuapp.com/0868
+                    <div class='url-shortener--fadeout'>
+                        will redirect to
+                    </div>
+                    https://www.google.com
+                </div>
+            </div>
+
+            <div class='footer'>
+                By <a href='https://timolawl.github.io'>Timolawl</a> |
+                <a href='https://twitter.com/timolawl'>Twitter</a> |
+                <a href='https://github.com/timolawl'>GitHub</a> |
+                <a href='https://codepen.io/timolawl'>Codepen</a> |
+                <a href='https://freecodecamp.com/timolawl'>Free Code Camp</a>
+            </div>
+        </div>
+    </body>
+</html>

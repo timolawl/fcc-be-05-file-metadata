@@ -1,0 +1,36 @@
+{
+  "name": "timolawl-file-metadata",
+  "version": "1.0.0",
+  "description": "File metadata microservice, a Free Code Camp full-stack app.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/timolawl/fcc-file-metadata.git"
+  },
+  "keywords": [
+    "node",
+    "express",
+    "javascript",
+    "freecodecamp",
+    "file metadata"
+  ],
+  "author": "Tim Chiang <timolawl@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/timolawl/fcc-file-metadata/issues"
+  },
+  "homepage": "https://github.com/timolawl/fcc-file-metadata#readme",
+  "dependencies": {
+    "express": "^4.13.4",
+    "multer": "^1.1.0",
+    "serve-favicon": "^2.3.0"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-sass": "^2.2.0"
+  }
+}
