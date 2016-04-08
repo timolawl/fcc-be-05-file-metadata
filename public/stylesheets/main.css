@@ -42,7 +42,8 @@ li:not(:last-child) {
   font-weight: bold;
   font-size: 3.5rem;
   margin-bottom: 0.5rem;
-  line-height: 100%; }
+  line-height: 100%;
+  text-indent: 0.75rem; }
 
 .file-metadata--subtitle {
   color: #8a0917;
