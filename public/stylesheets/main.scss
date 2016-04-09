@@ -88,7 +88,7 @@ input[type='file'] {
       color: $primary-color;
       width: 100px;
       border: 1px solid black;
-      background: $body-color;
+      background: lighten($background-color, 20%);
       padding: 0.5rem;
       vertical-align: middle;
       display: inline-block;
