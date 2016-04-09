@@ -20,8 +20,12 @@
                 </div>
             </div>
 
-            <form class='file-metadata__form--file' action='/file-upload' method='POST' enctype='multipart/form-data'>
-                <input type='file' name='fileToAnalyze' class='file-metadata__form--file' />
+            <form class='file-metadata__form' action='/file-upload' method='POST' enctype='multipart/form-data'>
+                <label for='fileToAnalyze' class='file-metadata__form--file'>
+                    Choose File
+                </label>
+                <span id='uploadedFile' class='file-metadata__form--uploadedFile'></span>
+                <input id='fileToAnalyze' type='file' name='fileToAnalyze' />
                 <input type='submit' value='Upload' class='file-metadata__form--submit' />
             </form>
 
@@ -34,5 +38,6 @@
                 <a href='https://freecodecamp.com/timolawl'>Free Code Camp</a>
             </div>
         </div>
+        <script src='/public/js/index.js'></script>
     </body>
 </html>

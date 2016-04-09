@@ -45,6 +45,10 @@ li:not(:last-child) {
   margin-bottom: 0.25rem;
 }
 
+input[type='file'] {
+    display: none;
+}
+
 .wrapper {
   position: absolute;
   top: 50%;
@@ -77,8 +81,31 @@ li:not(:last-child) {
     }
   }
   &__form {
-    &--file {
-      margin-top: 0.5rem;
+      position: relative;
+      margin-top: 1.2rem;
+
+    &--file, &--submit {
+      color: $primary-color;
+      width: 100px;
+      border: 1px solid black;
+      background: $body-color;
+      padding: 0.5rem;
+      vertical-align: middle;
+      display: inline-block;
+      font-weight: bold;
+      &:hover {
+          color: $secondary-color;
+          cursor: pointer;
+      }
+    }
+    &--uploadedFile {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    &--submit {
+        margin-left: 10rem;
     }
   }
 }

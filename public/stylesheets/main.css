@@ -27,6 +27,9 @@ a:active {
 li:not(:last-child) {
   margin-bottom: 0.25rem; }
 
+input[type='file'] {
+  display: none; }
+
 .wrapper {
   position: absolute;
   top: 50%;
@@ -60,8 +63,28 @@ li:not(:last-child) {
 .file-metadata__userstories--text {
   margin-left: 1.5rem; }
 
-.file-metadata__form--file {
-  margin-top: 0.5rem; }
+.file-metadata__form {
+  position: relative;
+  margin-top: 1.2rem; }
+  .file-metadata__form--file, .file-metadata__form--submit {
+    color: #8a0917;
+    width: 100px;
+    border: 1px solid black;
+    background: #accfcc;
+    padding: 0.5rem;
+    vertical-align: middle;
+    display: inline-block;
+    font-weight: bold; }
+    .file-metadata__form--file:hover, .file-metadata__form--submit:hover {
+      color: #595241;
+      cursor: pointer; }
+  .file-metadata__form--uploadedFile {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+  .file-metadata__form--submit {
+    margin-left: 10rem; }
 
 .footer {
   margin-top: 2rem; }
