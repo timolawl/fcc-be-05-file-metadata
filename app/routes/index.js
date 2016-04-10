@@ -1,7 +1,22 @@
 'use strict';
 
 
-module.exports = function (app, multer) {
+module.exports = function (app) {
+
+    var fs = require('fs');
+    var multer = require('multer');
+
+    var storage = multer.diskStorage({
+        destination: function (req, file, callback) {
+            callback(null, './')
+        },
+        filename: function (req, file, callback) {
+            callback(null, file.originalname + '-' + Date.now())
+        }
+    });
+
+    var upload = multer({ storage: storage });
+
 
     app.route('/')
         .get(function (req, res) {
@@ -9,8 +24,9 @@ module.exports = function (app, multer) {
         });
 
     app.route('/file-upload')
-        .post(multer({dest: './uploads/'}).single('fileToAnalyze'), function (req, res) {
+        .post(upload.single('fileToAnalyze'), function (req, res) {
             res.json({ size: req.file.size });
+            fs.unlink('./' + req.file.path);
         });
 
     app.use(function (req, res) {   // default response for any other path
