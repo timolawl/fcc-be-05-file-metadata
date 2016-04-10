@@ -17,7 +17,7 @@ gulp.task('style', function() {
         .pipe(plumber())
         .pipe(sass())
         .pipe(autoprefixer())
-        .pipe(gulpif(production, cssmin())
+        .pipe(gulpif(production, cssmin()))
         .pipe(gulp.dest('public/stylesheets/'));
 });
 
