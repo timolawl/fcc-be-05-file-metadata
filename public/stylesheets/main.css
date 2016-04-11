@@ -19,10 +19,10 @@ a:visited {
   color: #8a0917; }
 
 a:hover {
-  color: #595241; }
+  color: #766d57; }
 
 a:active {
-  color: #595241; }
+  color: #766d57; }
 
 li:not(:last-child) {
   margin-bottom: 0.25rem; }
@@ -34,7 +34,8 @@ input[type='file'] {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   padding: 1.5rem;
   border: 1px solid black;
   background: #b8ae9c; }
@@ -76,13 +77,14 @@ input[type='file'] {
     display: inline-block;
     font-weight: bold; }
     .file-metadata__form--file:hover, .file-metadata__form--submit:hover {
-      color: #595241;
+      color: #766d57;
       cursor: pointer; }
   .file-metadata__form--uploadedFile {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); }
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%); }
   .file-metadata__form--submit {
     margin-left: 10rem; }
 
